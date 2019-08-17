@@ -11,6 +11,7 @@ class Array {
 public:
     Array();
     Array(int capacity);
+    ~Array();
 
     size_t getSize() {
         return size_;
@@ -68,6 +69,9 @@ public:
     void printSelf();
 
     int& operator[](int index);
+
+    int getLast();
+    int getFirst();
 
 private:
     void resize(int new_capacity);

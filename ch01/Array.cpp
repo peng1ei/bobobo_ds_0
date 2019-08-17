@@ -17,6 +17,10 @@ Array::Array(int capacity) {
     size_ = 0;
 }
 
+Array::~Array() {
+    delete []data_;
+}
+
 void Array::add(int index, int e) {
     // index = 0, 表示在数组首位插入元素
     // index = size_, 表示在数组尾部插入元素
@@ -45,7 +49,7 @@ void Array::printSelf() {
     std::cout << "size_: " << size_ << std::endl;
     std::cout << "capacity_: " << capacity_ << std::endl;
 
-    std::cout << "Array: [ ";
+    std::cout << "[ ";
 
     for (int i = 0; i < size_ - 1; ++i) {
         std::cout << data_[i] << ", ";
@@ -86,7 +90,8 @@ void Array::remove(int index) {
 
     size_--;
 
-    if (size_ == capacity_ / 2)
+    // 懒机制缩容，避免复杂度震荡
+    if (size_ == capacity_ / 4 && capacity_ / 2 != 0)
         resize(capacity_ / 2);
 }
 
@@ -118,4 +123,11 @@ void Array::resize(int new_capacity) {
     capacity_ = new_capacity;
 }
 
+int Array::getFirst() {
+    return get(0);
+}
+
+int Array::getLast() {
+    return get(size_ - 1);
+}
 
