@@ -3,6 +3,7 @@
 #include "ch02/ArrayQueue.h"
 #include "ch02/LoopQueue.h"
 #include "ch04/LinkedList.h"
+#include "ch04/LinkedListStack.h"
 
 #include <iostream>
 #include <stack>
@@ -151,11 +152,38 @@ void TestLinkedList() {
     list.add(5, 101);
     list.printSelf();
 
+    list.removeFirst();
+    list.printSelf();
+
+    list.removeLast();
+    list.printSelf();
+
     list.add(5, 105);
+    list.printSelf();
+
+    list.remove(3);
     list.printSelf();
 
     list.addFirst(88);
     list.printSelf();
+}
+
+void TestLinkedListStack() {
+    LinkedListStack stack;
+    stack.printSelf();
+
+    stack.push(1);
+    stack.push(2);
+    stack.push(3);
+    stack.push(4);
+    stack.push(5);
+    stack.printSelf();
+
+    stack.pop();
+    stack.printSelf();
+
+    stack.peek();
+    stack.printSelf();
 }
 
 int main() {
@@ -163,7 +191,8 @@ int main() {
     //TestArrayStack();
     //TestArrayQueue();
     //TestLoopQueue();
-    TestLinkedList();
+    //TestLinkedList();
+    TestLinkedListStack();
 
     return 0;
 }

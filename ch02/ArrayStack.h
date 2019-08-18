@@ -6,20 +6,7 @@
 #define DS_BOBO_1_ARRAYSTACK_H
 
 #include "../ch01/Array.h"
-
-class IStack {
-public:
-    virtual ~IStack() {}
-
-    virtual void push(int e) = 0;
-    virtual int pop() = 0;
-
-    // 查询栈顶元素
-    virtual int peek() = 0;
-
-    virtual int getSize() = 0;
-    virtual bool isEmpty() = 0;
-};
+#include "IStack.h"
 
 class ArrayStack : public IStack {
 public:

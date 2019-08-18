@@ -42,6 +42,30 @@ public:
 
     void printSelf();
 
+    // 获得链表的第 index（0-based）个位置的元素
+    // 在链表中不是一个常用操作，练习用
+    int get(int index);
+
+    // 获得链表的第一个元素
+    int getFirst();
+
+    // 获得链表的最后一个元素
+    int getLast();
+
+    // 修改链表的第 index 个位置的元素为 e
+    // 在链表中不是一个常用操作，练习用
+    void set(int index, int e);
+
+    // 查找链表中是否有元素e
+    bool contains(int e);
+
+    // 从链表中删除 index 位置的元素，返回删除的元素
+    // 在链表中不是一个常用操作，练习用
+    int remove(int index);
+
+    int removeFirst();
+    int removeLast();
+
 private:
     //Node *head_;
     Node *dummy_head_; // 虚拟头结点

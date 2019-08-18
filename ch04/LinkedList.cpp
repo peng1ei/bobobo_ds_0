@@ -4,6 +4,7 @@
 
 #include "LinkedList.h"
 #include <iostream>
+#include <limits>
 
 LinkedList::LinkedList() {
 ///! 无虚拟头节点
@@ -17,6 +18,13 @@ LinkedList::LinkedList() {
 
 LinkedList::~LinkedList() {
     // TODO 释放资源
+    Node *curr = dummy_head_->next_;
+    while (curr != nullptr) {
+        Node *tmp = curr->next_;
+        delete curr;
+        curr = tmp;
+    }
+
 ///! 无虚拟头节点
 //    // 注意没有哨兵节点时第一个节点的特殊性
 //    if (head_) {
@@ -29,9 +37,6 @@ LinkedList::~LinkedList() {
 //        }
 //    }
 ///!
-
-
-
 }
 
 void LinkedList::addFirst(int e) {
@@ -60,6 +65,7 @@ void LinkedList::add(int index, int e) {
     }
 
     // 查找需要插入的位置的上一个节点
+    // 注意和遍历元素的区别
     Node *prev = dummy_head_;
     for (int i = 0; i < index; ++i) {
         prev = prev->next_;
@@ -135,15 +141,22 @@ void LinkedList::printSelf() {
         return;
     }
 
-    std::cout << "[";
+    // 方式1
+//    Node *curr = dummy_head_->next_;
+//    for (int i = 0; i < size_ - 1; ++i) {
+//        std::cout << curr->elem_ << "->";
+//        curr = curr->next_;
+//    }
+//
+//    std::cout << curr->elem_ << "->NULL" << std::endl;
 
-    Node *curr = dummy_head_->next_;
-    for (int i = 0; i < size_ - 1; ++i) {
-        std::cout << curr->elem_ << ", ";
-        curr = curr->next_;
+    // 方式2
+    for (Node *curr = dummy_head_->next_;
+        curr != nullptr; curr = curr->next_) {
+        std::cout << curr->elem_ << "->";
     }
 
-    std::cout << curr->elem_ << "]" << std::endl;
+    std::cout << "NULL" << std::endl;
 
 ///! 无虚拟头节点
 //    if (isEmpty()) {
@@ -168,3 +181,82 @@ void LinkedList::printSelf() {
 ///!
 }
 
+int LinkedList::get(int index) {
+    if (index < 0 || index > size_) {
+        std::cout << "Index " << index << " is invalid." << std::endl;
+        return std::numeric_limits<int>::min();
+    }
+
+    // 遍历链表，遍历元素
+    // 注意和查找前一个节点时遍历的区别
+    Node *curr = dummy_head_->next_;
+    for (int i = 0; i < index; ++i) {
+        curr = curr->next_;
+    }
+
+    return curr->elem_;
+}
+
+int LinkedList::getFirst() {
+    return get(0);
+}
+
+int LinkedList::getLast() {
+    return get(size_ - 1);
+}
+
+void LinkedList::set(int index, int e) {
+    if (index < 0 || index > size_) {
+        std::cout << "Index " << index << " is invalid." << std::endl;
+        return;
+    }
+
+    Node *curr = dummy_head_->next_;
+    for (int i = 0; i < index; ++i) {
+        curr = curr->next_;
+    }
+
+    curr->elem_ = e;
+}
+
+bool LinkedList::contains(int e) {
+    Node *curr = dummy_head_->next_;
+    while (curr != nullptr) {
+        if (curr->elem_ == e) {
+            return true;
+        }
+
+        curr = curr->next_;
+    }
+
+    return false;
+}
+
+int LinkedList::remove(int index) {
+    if (index < 0 || index >= size_) {
+        std::cout << "Index " << index << " is invalid." << std::endl;
+        return std::numeric_limits<int>::min();
+    }
+
+    Node *prev = dummy_head_;
+    for (int i = 0; i < index; ++i) {
+        prev = prev->next_;
+    }
+
+    Node *del_node = prev->next_;
+    prev->next_ = del_node->next_;
+    size_--;
+
+    int ret = del_node->elem_;
+    delete del_node;
+
+    return ret;
+}
+
+int LinkedList::removeFirst() {
+    return remove(0);
+}
+
+int LinkedList::removeLast() {
+    return remove(size_ - 1);
+}
