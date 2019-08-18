@@ -4,6 +4,7 @@
 #include "ch02/LoopQueue.h"
 #include "ch04/LinkedList.h"
 #include "ch04/LinkedListStack.h"
+#include "ch04/LinkedListQueue.h"
 
 #include <iostream>
 #include <stack>
@@ -186,13 +187,70 @@ void TestLinkedListStack() {
     stack.printSelf();
 }
 
+void TestLinkedListQueue() {
+    LinkedListQueue queue;
+    queue.printSelf();
+
+    queue.enqueue(1);
+    queue.enqueue(2);
+    queue.enqueue(3);
+    queue.enqueue(4);
+    queue.enqueue(5);
+    queue.enqueue(6);
+    queue.printSelf();
+
+    queue.enqueue(2);
+    queue.printSelf();
+
+    queue.dequeue();
+    queue.printSelf();
+
+    queue.enqueue(2);
+    queue.printSelf();
+
+    queue.enqueue(66);
+    queue.printSelf();
+
+    queue.dequeue();
+    queue.printSelf();
+    queue.dequeue();
+    queue.printSelf();
+    queue.dequeue();
+    queue.printSelf();
+    queue.dequeue();
+    queue.printSelf();
+
+    queue.enqueue(100);
+    queue.printSelf();
+
+    queue.dequeue();
+    queue.printSelf();
+    queue.dequeue();
+    queue.printSelf();
+
+    queue.enqueue(200);
+    queue.printSelf();
+
+    queue.dequeue();
+    queue.printSelf();
+
+    queue.enqueue(12);
+    queue.enqueue(13);
+    queue.enqueue(3);
+    queue.enqueue(4);
+    queue.enqueue(5);
+    queue.enqueue(88);
+    queue.printSelf();
+}
+
 int main() {
     //TestArray();
     //TestArrayStack();
     //TestArrayQueue();
     //TestLoopQueue();
     //TestLinkedList();
-    TestLinkedListStack();
+    //TestLinkedListStack();
+    TestLinkedListQueue();
 
     return 0;
 }
