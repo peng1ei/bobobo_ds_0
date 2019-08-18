@@ -134,6 +134,8 @@ void TestLinkedList() {
     list.printSelf();
 
     list.addFirst(1);
+    list.printSelf();
+
     list.addLast(2);
     list.add(4, 88);
     list.printSelf();
@@ -150,6 +152,9 @@ void TestLinkedList() {
     list.printSelf();
 
     list.add(5, 105);
+    list.printSelf();
+
+    list.addFirst(88);
     list.printSelf();
 }
 

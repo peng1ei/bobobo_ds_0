@@ -43,7 +43,8 @@ public:
     void printSelf();
 
 private:
-    Node *head_;
+    //Node *head_;
+    Node *dummy_head_; // 虚拟头结点
     int size_;
 };
 
