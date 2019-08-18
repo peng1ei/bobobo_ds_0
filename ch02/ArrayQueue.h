@@ -13,6 +13,7 @@ public:
     ArrayQueue();
     ArrayQueue(int capacity);
 
+    // 时间复杂度 O(1)
     void enqueue(int e) override ;
 
     // 时间复杂度为 O(n)

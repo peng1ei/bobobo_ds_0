@@ -13,9 +13,10 @@ public:
     LoopQueue(int capacity);
     ~LoopQueue();
 
+    // 时间复杂度 O(1) 均摊
     void enqueue(int e) override ;
 
-    // 时间复杂度为 O(n)
+    // 时间复杂度为 O(1) 均摊
     int dequeue() override ;
     int getFront() override ;
     int getSize() override ;
@@ -31,6 +32,7 @@ public:
 
 private:
     bool isFull();
+    void resize(int new_capacity);
 
 private:
     int *data_;
