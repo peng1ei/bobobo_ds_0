@@ -31,11 +31,18 @@ public:
         return size_ == 0;
     }
 
+    // 递归版本_v1
+    //void add(int e);
+
+    // 递归版本_v2
     void add(int e);
 
 private:
-    // 递归添加元素
-    void add(Node *root, int e);
+    // // 递归版本_v1
+    //void add(Node *root, int e);
+
+    // 递归版本_v2
+    Node* add(Node *root, int e);
 
 private:
     Node *root_;
