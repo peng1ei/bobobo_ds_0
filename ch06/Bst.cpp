@@ -66,4 +66,21 @@ Bst::Node* Bst::add(Bst::Node *root, int e) {
     return root;
 }
 
+bool Bst::contains(int e) {
+
+}
+
+bool Bst::contains(Bst::Node *node, int e) {
+    if (node == nullptr) {
+        return false;
+    }
+
+    if (node->elem_ == e) {
+        return true;
+    } else if (node->elem_ > e) {
+        return contains(node->left_, e);
+    } else {
+        return contains(node->right_, e);
+    }
+}
 

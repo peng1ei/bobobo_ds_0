@@ -37,12 +37,16 @@ public:
     // 递归版本_v2
     void add(int e);
 
+    bool contains(int e);
+
 private:
     // // 递归版本_v1
     //void add(Node *root, int e);
 
     // 递归版本_v2
     Node* add(Node *root, int e);
+
+    bool contains(Node *node, int e);
 
 private:
     Node *root_;
