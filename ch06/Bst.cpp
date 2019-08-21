@@ -93,8 +93,38 @@ void Bst::preOrder(Bst::Node *node) {
     if (node == nullptr)
         return;
 
+    // 访问节点
     std::cout << node->elem_ << std::endl;
     preOrder(node->left_);
     preOrder(node->right_);
+}
+
+void Bst::inOrder() {
+    inOrder(root_);
+}
+
+void Bst::inOrder(Bst::Node *node) {
+    if (node == nullptr)
+        return;
+
+    inOrder(node->left_);
+    // 访问节点
+    std::cout << node->elem_ << std::endl;
+    inOrder(node->right_);
+}
+
+void Bst::postOrder() {
+    postOrder(root_);
+}
+
+void Bst::postOrder(Bst::Node *node) {
+    if (node == nullptr)
+        return;
+
+    postOrder(node->left_);
+    postOrder(node->right_);
+
+    // 访问节点
+    std::cout << node->elem_ << std::endl;
 }
 

@@ -41,6 +41,13 @@ public:
 
     // 前序遍历
     void preOrder();
+
+    // 中序遍历
+    void inOrder();
+
+    // 后序遍历
+    void postOrder();
+
 private:
     // // 递归版本_v1
     //void add(Node *root, int e);
@@ -51,6 +58,8 @@ private:
     bool contains(Node *node, int e);
 
     void preOrder(Node *node);
+    void inOrder(Node *node);
+    void postOrder(Node *node);
 
 private:
     Node *root_;
