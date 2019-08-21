@@ -41,6 +41,8 @@ public:
 
     // 前序遍历
     void preOrder();
+    // 非递归
+    void preOrderNR();
 
     // 中序遍历
     void inOrder();
@@ -57,6 +59,7 @@ private:
 
     bool contains(Node *node, int e);
 
+    // 前中后序遍历，递归实现
     void preOrder(Node *node);
     void inOrder(Node *node);
     void postOrder(Node *node);

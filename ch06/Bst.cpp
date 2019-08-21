@@ -4,6 +4,7 @@
 
 #include "Bst.h"
 #include <iostream>
+#include <stack>
 
 Bst::Bst() {
     root_ = nullptr;
@@ -126,5 +127,30 @@ void Bst::postOrder(Bst::Node *node) {
 
     // 访问节点
     std::cout << node->elem_ << std::endl;
+}
+
+void Bst::preOrderNR() {
+    std::stack<Node*> st;
+    st.push(root_);
+
+    while (!st.empty()) {
+        Node *node = st.top();
+        st.pop();
+
+        // 访问当前节点
+        std::cout << node->elem_ << std::endl;
+
+        // 访问完每棵子树的根节点时，接下来要要访问当前根节点
+        // 的左右子树。
+        // 由于使用栈结构来存放下次需要访问的节点，而栈的特点是
+        // 后进先出，所以这里需要将右孩子节点先压入栈中，然后再
+        // 压入左子树，这样当下次访问时，从栈中首先弹出的就是左
+        // 孩子节点了
+        if (node->right_ != nullptr)
+            st.push(node->right_);
+
+        if (node->left_ != nullptr)
+            st.push(node->left_);
+    }
 }
 
