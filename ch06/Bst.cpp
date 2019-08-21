@@ -5,6 +5,7 @@
 #include "Bst.h"
 #include <iostream>
 #include <stack>
+#include <queue>
 
 Bst::Bst() {
     root_ = nullptr;
@@ -154,3 +155,22 @@ void Bst::preOrderNR() {
     }
 }
 
+void Bst::levelOrder() {
+    std::queue<Node*> queue;
+    queue.push(root_);
+
+    while (!queue.empty()) {
+        Node *node = queue.front();
+        queue.pop();
+
+        // 访问当前节点
+        std::cout << node->elem_ << std::endl;
+        if (node->left_ != nullptr) {
+            queue.push(node->left_);
+        }
+
+        if (node->right_ != nullptr) {
+            queue.push(node->right_);
+        }
+    }
+}

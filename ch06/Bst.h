@@ -41,7 +41,7 @@ public:
 
     // 前序遍历
     void preOrder();
-    // 非递归
+    // 非递归（需要栈这个数据结构辅助，深度优先遍历）
     void preOrderNR();
 
     // 中序遍历
@@ -50,8 +50,11 @@ public:
     // 后序遍历
     void postOrder();
 
+    // 层序遍历（广度优先遍历，需要队列这个辅助数据结构支持）
+    void levelOrder();
+
 private:
-    // // 递归版本_v1
+    // 递归版本_v1
     //void add(Node *root, int e);
 
     // 递归版本_v2
