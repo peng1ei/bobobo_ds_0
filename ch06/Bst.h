@@ -39,6 +39,8 @@ public:
 
     bool contains(int e);
 
+    // 前序遍历
+    void preOrder();
 private:
     // // 递归版本_v1
     //void add(Node *root, int e);
@@ -47,6 +49,8 @@ private:
     Node* add(Node *root, int e);
 
     bool contains(Node *node, int e);
+
+    void preOrder(Node *node);
 
 private:
     Node *root_;

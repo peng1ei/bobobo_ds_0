@@ -5,6 +5,7 @@
 #include "ch04/LinkedList.h"
 #include "ch04/LinkedListStack.h"
 #include "ch04/LinkedListQueue.h"
+#include "ch06/Bst.h"
 
 #include <iostream>
 #include <stack>
@@ -243,6 +244,18 @@ void TestLinkedListQueue() {
     queue.printSelf();
 }
 
+void TestBst() {
+    Bst bst;
+
+    bst.add(67);
+    bst.add(9);
+    bst.add(66);
+    bst.add(1);
+    bst.add(109);
+    bst.add(78);
+    bst.preOrder();
+}
+
 int main() {
     //TestArray();
     //TestArrayStack();
@@ -250,7 +263,8 @@ int main() {
     //TestLoopQueue();
     //TestLinkedList();
     //TestLinkedListStack();
-    TestLinkedListQueue();
+    //TestLinkedListQueue();
+    TestBst();
 
     return 0;
 }

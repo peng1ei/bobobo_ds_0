@@ -3,6 +3,7 @@
 //
 
 #include "Bst.h"
+#include <iostream>
 
 Bst::Bst() {
     root_ = nullptr;
@@ -67,7 +68,7 @@ Bst::Node* Bst::add(Bst::Node *root, int e) {
 }
 
 bool Bst::contains(int e) {
-
+    return contains(root_, e);
 }
 
 bool Bst::contains(Bst::Node *node, int e) {
@@ -82,5 +83,18 @@ bool Bst::contains(Bst::Node *node, int e) {
     } else {
         return contains(node->right_, e);
     }
+}
+
+void Bst::preOrder() {
+    preOrder(root_);
+}
+
+void Bst::preOrder(Bst::Node *node) {
+    if (node == nullptr)
+        return;
+
+    std::cout << node->elem_ << std::endl;
+    preOrder(node->left_);
+    preOrder(node->right_);
 }
 
