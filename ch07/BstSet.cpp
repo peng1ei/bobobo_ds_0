@@ -5,30 +5,30 @@
 #include "BstSet.h"
 
 BstSet::BstSet() {
-    bst = new Bst;
+    bst_ = new Bst;
 }
 
 BstSet::~BstSet() {
-    delete bst;
+    delete bst_;
 }
 
 int BstSet::getSize() {
-    return bst->size();
+    return bst_->size();
 }
 
 bool BstSet::isEmpty() {
-    return bst->isEmpty();
+    return bst_->isEmpty();
 }
 
 void BstSet::add(int e) {
-    bst->add(e);
+    bst_->add(e);
 }
 
 void BstSet::remove(int e) {
-    bst->remove(e);
+    bst_->remove(e);
 }
 
 bool BstSet::contains(int e) {
-    return bst->contains(e);
+    return bst_->contains(e);
 }
 
