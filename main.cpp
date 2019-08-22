@@ -264,7 +264,7 @@ int main() {
     //TestLinkedList();
     //TestLinkedListStack();
     //TestLinkedListQueue();
-    TestBst();
+    //TestBst();
 
     return 0;
 }
