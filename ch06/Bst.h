@@ -66,6 +66,9 @@ public:
     int removeMin();
     int removeMax();
 
+    // 删除任意给定的值所在的节点
+    void remove(int e);
+
 private:
     // 递归版本_v1
     //void add(Node *root, int e);
@@ -96,6 +99,10 @@ private:
     // 返回删除节点后新的二分搜索树的根
     Node* removeMin(Node *node);
     Node* removeMax(Node *node);
+
+    // 删除掉以node为根的二分搜索树中值为e的节点，递归算法
+    // 返回删除节点后新的二分搜索树的根
+    Node* remove(Node *node, int e);
 
 private:
     Node *root_;

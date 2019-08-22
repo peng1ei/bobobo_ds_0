@@ -250,3 +250,51 @@ Bst::Node* Bst::removeMax(Bst::Node *node) {
     node->right_ = removeMax(node->right_);
     return node;
 }
+
+void Bst::remove(int e) {
+    root_ = remove(root_, e);
+}
+
+Bst::Node* Bst::remove(Bst::Node *node, int e) {
+    if (node == nullptr) {
+        return nullptr;
+    }
+
+    if (node->elem_ > e) {
+        node->left_ = remove(node->left_, e);
+        return node;
+    } else if (node->elem_ < e) {
+        node->right_ = remove(node->right_, e);
+        return node;
+    } else { // node->elem_ == e
+        // 待删除节点左子树为空的情况
+        if (node->left_ == nullptr) {
+            Node *right_node = node->right_;
+            delete node;
+            size_--;
+            return right_node;
+        }
+
+        // 待删除节点右子树为空的情况
+        if (node->right_ == nullptr) {
+            Node *left_node = node->left_;
+            delete node->left_;
+            size_--;
+            return left_node;
+        }
+
+        // 待删除节点左右子树都不为空的情况
+        // 找到比待删除节点大的最小节点，即待删除节点右子树的最小节点
+        // 用这个节点顶替待删除节点的位置
+        // successor 为 node 的后继
+        Node *successor = minimum(node->right_);
+        successor->right_ = removeMin(node->right_);
+        successor->left_ = node->left_;
+
+        // 删除待删除的节点
+        delete node;
+
+        return successor;
+    }
+}
+
