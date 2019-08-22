@@ -37,6 +37,7 @@ public:
     // 递归版本_v2
     void add(int e);
 
+    // 查找是否包含某个元素
     bool contains(int e);
 
     // 前序遍历
@@ -44,6 +45,7 @@ public:
     // 非递归（需要栈这个数据结构辅助，深度优先遍历）
     void preOrderNR();
 
+    // TODO 中序和后序遍历的非递归实现
     // 中序遍历
     void inOrder();
 
@@ -52,6 +54,17 @@ public:
 
     // 层序遍历（广度优先遍历，需要队列这个辅助数据结构支持）
     void levelOrder();
+
+    // TODO 寻找二分搜索树最小值和最大值的非递归实现
+    // 寻找二分搜索树的最小元素
+    int minimum();
+
+    // 寻找二分搜索树的最大元素
+    int maximum();
+
+    // 删除二分搜索树中最小/大值所在的节点，并返回最小/大值
+    int removeMin();
+    int removeMax();
 
 private:
     // 递归版本_v1
@@ -66,6 +79,23 @@ private:
     void preOrder(Node *node);
     void inOrder(Node *node);
     void postOrder(Node *node);
+
+    // 返回以 node 为根的二分搜索树的最小值所在的节点
+    // 基本思想就是从根节点开始，一直访问左孩子节点，直到
+    // 所访问到的节点再也没有左孩子，则该节点就是元素值最小
+    // 的节点
+    Node* minimum(Node *node);
+
+    // 返回以 node 为根的二分搜索树的最大值所在的节点
+    // 基本思想就是从根节点开始，一直访问右孩子节点，直到
+    // 所访问到的节点再也没有右孩子，则该节点就是元素值最大
+    // 的节点
+    Node* maximum(Node *node);
+
+    // 删除掉以node为根的二分搜索树中的最小/最大节点
+    // 返回删除节点后新的二分搜索树的根
+    Node* removeMin(Node *node);
+    Node* removeMax(Node *node);
 
 private:
     Node *root_;

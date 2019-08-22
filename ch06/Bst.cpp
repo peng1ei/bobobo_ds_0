@@ -6,6 +6,7 @@
 #include <iostream>
 #include <stack>
 #include <queue>
+#include <limits>
 
 Bst::Bst() {
     root_ = nullptr;
@@ -173,4 +174,79 @@ void Bst::levelOrder() {
             queue.push(node->right_);
         }
     }
+}
+
+int Bst::minimum() {
+    if (size_ == 0) {
+        std::cout << "BST is empty." << std::endl;
+        return std::numeric_limits<int>::min();
+    }
+
+    return minimum(root_)->elem_;
+}
+
+Bst::Node* Bst::minimum(Bst::Node *node) {
+    if (node->left_ == nullptr)
+        return node;
+    return minimum(node->left_);
+}
+
+int Bst::maximum() {
+    if (size_ == 0) {
+        std::cout << "BST is empty." << std::endl;
+        return std::numeric_limits<int>::min();
+    }
+
+    return maximum(root_)->elem_;
+}
+
+Bst::Node* Bst::maximum(Bst::Node *node) {
+    if (node->right_ == nullptr)
+        return node;
+
+    return maximum(node->right_);
+}
+
+int Bst::removeMin() {
+    int ret = minimum();
+    root_ = removeMin(root_);
+    return ret;
+}
+
+// 删除掉以node为根的二分搜索树中的最小节点
+// 返回删除节点后新的二分搜索树的根
+Bst::Node* Bst::removeMin(Bst::Node *node) {
+    // 如果当前节点已经没有左孩子了，则说明当前节点就是值
+    // 最小的节点
+    if (node->left_ == nullptr) {
+        // 如果当前待删除的节点有右孩子的话，需要将其返回
+        Node *right_node = node->right_;
+        // 删除当前最小值所在的节点
+        delete node;
+        size_--;
+        return right_node;
+    }
+
+    node->left_ = removeMin(node->left_);
+    return node;
+}
+
+int Bst::removeMax() {
+    int ret = maximum();
+    root_ = removeMax(root_);
+    return ret;
+}
+
+Bst::Node* Bst::removeMax(Bst::Node *node) {
+    // 如果当前节点已经没有左=右孩子了，则说明当前节点就是值
+    // 最大的节点
+    if (node->right_ == nullptr) {
+        Node *left_node = node->left_;
+        delete node;
+        size_--;
+        return left_node;
+    }
+
+    node->right_ = removeMax(node->right_);
+    return node;
 }
