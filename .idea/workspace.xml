@@ -12,8 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8fc51edc-3223-4921-a7bc-904c5565d526" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ch07/BstSet.h" beforeDir="false" afterPath="$PROJECT_DIR$/ch07/BstSet.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch07/LinkedListSet.h" beforeDir="false" afterPath="$PROJECT_DIR$/ch07/LinkedListSet.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch07/IMap.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,7 +42,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.43209878">
+    <splitter split-orientation="horizontal" split-proportion="0.640076">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -58,10 +59,10 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ch07/BstSet.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
+                <state relative-caret-position="57">
                   <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
                   <folding>
                     <element signature="e#91#108#0" expanded="true" />
@@ -70,11 +71,20 @@
               </provider>
             </entry>
           </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/ch07/IMap.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="280">
+                  <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ch07/LinkedListSet.h">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="100">
-                  <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+                  <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
                   <folding>
                     <element signature="e#143#160#0" expanded="true" />
                   </folding>
@@ -98,7 +108,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ch07/LinkedListSet.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="301">
+                <state relative-caret-position="121">
                   <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
                 </state>
               </provider>
@@ -108,7 +118,7 @@
             <entry file="file://$PROJECT_DIR$/ch04/LinkedList.cpp">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="225">
-                  <caret line="276" column="5" lean-forward="true" selection-start-line="276" selection-start-column="5" selection-end-line="276" selection-end-column="5" />
+                  <caret line="276" column="5" selection-start-line="276" selection-start-column="5" selection-end-line="276" selection-end-column="5" />
                   <folding>
                     <element signature="e#36#59#0" expanded="true" />
                   </folding>
@@ -147,6 +157,7 @@
         <option value="$PROJECT_DIR$/ch07/LinkedListSet.cpp" />
         <option value="$PROJECT_DIR$/ch07/LinkedListSet.h" />
         <option value="$PROJECT_DIR$/ch07/BstSet.h" />
+        <option value="$PROJECT_DIR$/ch07/IMap.h" />
       </list>
     </option>
   </component>
@@ -225,12 +236,12 @@
       <updated>1566031725006</updated>
       <workItem from="1566031727377" duration="39504000" />
       <workItem from="1566391167026" duration="5370000" />
-      <workItem from="1566451996168" duration="8272000" />
+      <workItem from="1566451996168" duration="9503000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53146000" />
+    <option name="totallyTimeSpent" value="54377000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -257,7 +268,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32952693" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.28384992" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.29690048" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32789558" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="CMake" order="12" />
@@ -449,7 +460,7 @@
     <entry file="file://$PROJECT_DIR$/ch04/LinkedList.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="276" column="5" lean-forward="true" selection-start-line="276" selection-start-column="5" selection-end-line="276" selection-end-column="5" />
+          <caret line="276" column="5" selection-start-line="276" selection-start-column="5" selection-end-line="276" selection-end-column="5" />
           <folding>
             <element signature="e#36#59#0" expanded="true" />
           </folding>
@@ -465,7 +476,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ch07/LinkedListSet.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
+        <state relative-caret-position="121">
           <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
         </state>
       </provider>
@@ -473,7 +484,7 @@
     <entry file="file://$PROJECT_DIR$/ch07/LinkedListSet.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
-          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
           <folding>
             <element signature="e#143#160#0" expanded="true" />
           </folding>
@@ -482,11 +493,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ch07/BstSet.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="57">
           <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
           <folding>
             <element signature="e#91#108#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch07/IMap.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
         </state>
       </provider>
     </entry>
