@@ -12,11 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8fc51edc-3223-4921-a7bc-904c5565d526" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch07/BstSet.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ch07/BstSet.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ch07/BstSet.h" beforeDir="false" afterPath="$PROJECT_DIR$/ch07/BstSet.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch07/LinkedListSet.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ch07/LinkedListSet.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ch07/LinkedListSet.h" beforeDir="false" afterPath="$PROJECT_DIR$/ch07/LinkedListSet.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -62,11 +58,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ch07/BstSet.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="361">
-                  <caret line="23" column="13" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="13" />
+                <state relative-caret-position="180">
+                  <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
                   <folding>
                     <element signature="e#91#108#0" expanded="true" />
                   </folding>
@@ -74,20 +70,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/ch04/LinkedList.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="227">
-                  <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ch07/LinkedListSet.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="279">
-                  <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+                <state relative-caret-position="100">
+                  <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
                   <folding>
                     <element signature="e#143#160#0" expanded="true" />
                   </folding>
@@ -103,7 +90,7 @@
             <entry file="file://$PROJECT_DIR$/ch07/BstSet.cpp">
               <provider selected="true" editor-type-id="text-editor">
                 <state>
-                  <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+                  <caret line="21" selection-start-line="21" selection-end-line="21" />
                 </state>
               </provider>
             </entry>
@@ -154,12 +141,12 @@
         <option value="$PROJECT_DIR$/ch06/Bst.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/ch07/ISet.h" />
-        <option value="$PROJECT_DIR$/ch07/LinkedListSet.h" />
-        <option value="$PROJECT_DIR$/ch07/BstSet.h" />
         <option value="$PROJECT_DIR$/ch07/BstSet.cpp" />
         <option value="$PROJECT_DIR$/ch04/LinkedList.h" />
         <option value="$PROJECT_DIR$/ch04/LinkedList.cpp" />
         <option value="$PROJECT_DIR$/ch07/LinkedListSet.cpp" />
+        <option value="$PROJECT_DIR$/ch07/LinkedListSet.h" />
+        <option value="$PROJECT_DIR$/ch07/BstSet.h" />
       </list>
     </option>
   </component>
@@ -238,12 +225,21 @@
       <updated>1566031725006</updated>
       <workItem from="1566031727377" duration="39504000" />
       <workItem from="1566391167026" duration="5370000" />
-      <workItem from="1566451996168" duration="7354000" />
+      <workItem from="1566451996168" duration="8272000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52228000" />
+    <option name="totallyTimeSpent" value="53146000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1331" height="743" extended-state="6" />
@@ -258,7 +254,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39967373" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32952693" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.28384992" />
       <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.29690048" />
@@ -433,26 +429,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ch07/LinkedListSet.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-          <folding>
-            <element signature="e#143#160#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch07/BstSet.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="13" />
-          <folding>
-            <element signature="e#91#108#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ch06/Bst.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="667">
@@ -466,7 +442,7 @@
     <entry file="file://$PROJECT_DIR$/ch07/BstSet.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
@@ -482,7 +458,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ch04/LinkedList.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
+        <state relative-caret-position="1340">
           <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
         </state>
       </provider>
@@ -491,6 +467,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
           <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch07/LinkedListSet.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+          <folding>
+            <element signature="e#143#160#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch07/BstSet.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding>
+            <element signature="e#91#108#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,27 +1,1 @@
-//
-// Created by pl on 19-8-22.
-//
-// 基于二分搜索树（Bst）实现的集合（Set）
-// 要求存放的元素的类型具有可比性
-
-#ifndef DS_BOBO_1_BSTSET_H
-#define DS_BOBO_1_BSTSET_H
-#include "ISet.h"
-#include "../ch06/Bst.h"
-
-class BstSet : public ISet {
-public:
-    BstSet();
-    ~BstSet();
-
-    void add(int e) override ;
-    void remove(int e) override ;
-    bool contains(int e) override ;
-    bool isEmpty() override ;
-    int getSize() override ;
-
-private:
-    Bst *bst_;
-};
-
-#endif //DS_BOBO_1_BSTSET_H
+//// Created by pl on 19-8-22.//// 基于二分搜索树（Bst）实现的集合（Set）// 要求存放的元素的类型具有可比性// 增、删、查的平均时间复杂度为 O(logn)// 最差时间复杂度为 O(n)，这就是当二分搜索树退化// 为 链表 时的情况，也是二分搜索树的一个局限性// 为了解决这个局限性，可以使用平衡二叉树（如红黑树）// 来实现集合。C++ stl 里的 set/map 就是使用红黑树实现的#ifndef DS_BOBO_1_BSTSET_H#define DS_BOBO_1_BSTSET_H#include "ISet.h"#include "../ch06/Bst.h"class BstSet : public ISet {public:    BstSet();    ~BstSet();    void add(int e) override ;    void remove(int e) override ;    bool contains(int e) override ;    bool isEmpty() override ;    int getSize() override ;private:    Bst *bst_;};#endif //DS_BOBO_1_BSTSET_H

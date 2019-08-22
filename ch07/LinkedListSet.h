@@ -3,6 +3,7 @@
 //
 // 基于链表实现的集合（Set）
 // 不要求存放的元素的类型具有可比性
+// 增、删、查的时间复杂度为 O(n)
 
 #ifndef DS_BOBO_1_LINKEDLISTSET_H
 #define DS_BOBO_1_LINKEDLISTSET_H
