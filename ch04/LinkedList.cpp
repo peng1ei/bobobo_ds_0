@@ -260,3 +260,19 @@ int LinkedList::removeFirst() {
 int LinkedList::removeLast() {
     return remove(size_ - 1);
 }
+
+void LinkedList::removeElement(int e) {
+    Node *prev = dummy_head_;
+    while (prev->next_ != nullptr) {
+        if (prev->next_->elem_ == e)
+            break;
+
+        prev = prev->next_;
+    }
+
+    if (prev->next_ != nullptr) {
+        Node *del_node = prev->next_;
+        prev->next_ = del_node->next_;
+        del_node->next_ = nullptr;
+    }
+}

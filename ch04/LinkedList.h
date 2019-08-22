@@ -66,6 +66,8 @@ public:
     int removeFirst();
     int removeLast();
 
+    void removeElement(int e);
+
 private:
     //Node *head_;
     Node *dummy_head_; // 虚拟头结点
